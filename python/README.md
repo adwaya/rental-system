@@ -38,7 +38,6 @@ This project is a **fully working MVP** that allows users to browse, search, and
 - **Maps:** Google Maps embed (optional)
 - **Version Control:** Git & GitHub
 
----
 ## 📂 Project Structure
 
 rental-system/
