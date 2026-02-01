@@ -40,6 +40,7 @@ This project is a **fully working MVP** that allows users to browse, search, and
 
 ## 📂 Project Structure
 
+```
 rental-system/
 ├── manage.py
 ├── README.md
@@ -69,7 +70,7 @@ rental-system/
     └── properties/
         └── css/
             └── style.css
-
+```
 ---
 
 ## 🚀 Getting Started (macOS)
