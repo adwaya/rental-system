@@ -42,35 +42,34 @@ This project is a **fully working MVP** that allows users to browse, search, and
 ## 📂 Project Structure
 
 rental-system/
-│
 ├── manage.py
 ├── README.md
 ├── .gitignore
 │
 ├── smart_rental/
-│ ├── settings.py
-│ ├── urls.py
-│ ├── asgi.py
-│ └── wsgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
 │
 ├── properties/
-│ ├── admin.py
-│ ├── apps.py
-│ ├── models.py
-│ ├── views.py
-│ ├── urls.py
-│ └── migrations/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   └── migrations/
 │
 ├── templates/
-│ └── properties/
-│ ├── base.html
-│ ├── home.html
-│ └── detail.html
+│   └── properties/
+│       ├── base.html
+│       ├── home.html
+│       └── detail.html
 │
 └── static/
-└── properties/
-└── css/
-└── style.css
+    └── properties/
+        └── css/
+            └── style.css
 
 ---
 
