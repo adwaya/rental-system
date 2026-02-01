@@ -1,0 +1,69 @@
+{% extends "properties/base.html" %}
+{% block title %}Property for Rent & Sale{% endblock %}
+
+{% block content %}
+
+<!-- HERO SEARCH -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Property for Rent & Sale</h1>
+    <p>Search homes across Northern Ireland</p>
+
+    <!-- IMPORTANT: method="get" -->
+    <form class="hero-search" method="get">
+      <input
+        type="text"
+        name="location"
+        placeholder="City, area or postcode"
+        value="{{ filters.location }}"
+      >
+
+      <select name="type">
+        <option value="">Rent or Sale</option>
+        <option value="rent" {% if filters.type == "rent" %}selected{% endif %}>Rent</option>
+        <option value="sale" {% if filters.type == "sale" %}selected{% endif %}>Sale</option>
+      </select>
+
+      <input
+        type="number"
+        name="max_price"
+        placeholder="Max price"
+        value="{{ filters.max_price }}"
+      >
+
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</section>
+
+<!-- RESULTS HEADER -->
+<div class="results-header">
+  <h2>Available Properties</h2>
+</div>
+
+<!-- PROPERTY GRID -->
+<section class="grid">
+  {% for p in properties %}
+    <a href="{% url 'property_detail' p.id %}" class="card-link">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/400/300?random={{ p.id }}">
+          <span class="price-badge">£{{ p.price }}</span>
+        </div>
+
+        <div class="card-body">
+          <h3>{{ p.title }}</h3>
+          <p class="location">{{ p.location }}</p>
+          <div class="meta">
+            🛏 {{ p.bedrooms }} &nbsp;&nbsp; 🛁 {{ p.bathrooms }}
+          </div>
+          <span class="tag">{{ p.get_property_type_display }}</span>
+        </div>
+      </div>
+    </a>
+  {% empty %}
+    <p>No properties match your search.</p>
+  {% endfor %}
+</section>
+
+{% endblock %}
