@@ -1,0 +1,13 @@
+import React from 'react'
+import "./Home.css"
+import Card from "../Card/Card";
+
+function Home() {
+  return (
+    <div id='home'> 
+        <Card/>
+    </div>
+  )
+}
+
+export default Home
