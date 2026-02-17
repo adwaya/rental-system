@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Home.css"
 import Card from "../Card/Card";
 import house from '../../assets/house1.jpg'
@@ -37,11 +37,26 @@ import hut2 from '../../assets/hut2.webp'
 import ski from '../../assets/ski1.avif'
 import ski1 from '../../assets/ski2.avif'
 import ski2 from '../../assets/ski.jpg'
+import { dataContext } from '../../Context/Usercontext';
 
 
 
 
 function Home() {
+   let{
+        title,
+        setTitle,
+        addListing,
+        setaddListing,
+        addImage1,
+        setaddImage1,
+        addImage2,
+        setaddImage2,
+        addImage3,
+        setaddImage3,
+        price,
+        setprice
+   } = useContext(dataContext)
   return (
     <div id='home'> 
         <Card image1={house} image2={house1} image3={house2} title={"3 BHK Villa in Tiruppur"} price={"40,000"}/>
@@ -56,6 +71,14 @@ function Home() {
         <Card image1={roomnew} image2={roomnew1} image3={roomnew2} title={"Houses At Nelagiri"} price={"70,000"}/>
         <Card image1={hut} image2={hut1} image3={hut2} title={"Houses At Nelagiri"} price={"70,000"}/>
         <Card image1={ski} image2={ski1} image3={ski2} title={"Houses At Nelagiri"} price={"70,000"}/>
+        
+  {addListing ? 
+    <Card  image1={URL.createObjectURL(addImage1)}
+      image2={URL.createObjectURL(addImage2)}
+      image3={URL.createObjectURL(addImage3)}
+      title={title}
+      price={price}
+    />:""}
     </div>
   )
 }

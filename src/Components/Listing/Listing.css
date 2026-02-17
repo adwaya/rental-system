@@ -1,4 +1,4 @@
-#login{
+#listing{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -6,8 +6,12 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
+    padding-top: 100px;
+    margin-bottom: 300px;
+    
 }
-#login form{
+
+#listing form{
     width: 70%;
     height: 100%;
     display: flex;
@@ -15,27 +19,29 @@
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 250px;
+    margin-bottom: 300px;
+    margin-top: 300px;
+    padding: 30px;
 }
-#logintitle{
+#listingtitle{
     font-size: 40px;
     font-weight: 500;
     color: black;
     margin-bottom: 20px;
 }
-#login .list{
+#listing .list{
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: column;
 }
-#login .list label{
+#listing .list label{
     font-size: 20px;
     font-weight: 300;
     color: black;
 
 }
-#login .list input{
+#listing .list input{
     width: 90%;
     padding: 3px;
     box-sizing: border-box;
@@ -45,7 +51,17 @@
     color: black;
     border: 1px solid rgb(71, 71, 70);
 }
-#loginbtn{
+#listing .list textarea{
+    width: 90px;
+    padding: 3px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+    border: 1px solid rgb(71, 71, 70);
+}
+#listbtn{
     padding: 10px 40px 10px 40px;
     background-color: #03045E;
     color: white;
@@ -57,7 +73,7 @@
     gap: 5px;
     border: none;
 }
-#loginbtn svg{
+#listbtn svg{
     width: 20px;
     height: 20px;
     color: white;
